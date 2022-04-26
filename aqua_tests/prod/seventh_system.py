@@ -10,19 +10,19 @@ import matplotlib.ticker as ticker
 
 ax2 = plt.subplot(1,1,1)
 plt.grid()
-#plt.title("Изменение веса рыбы при постоянной температуре = 22°C")
+plt.title("Изменение веса рыбы при постоянной температуре = 22°C")
 #plt.title("Изменение веса рыбы при постоянной температуре = 27°C")
-plt.title("Изменение веса рыбы при постоянной температуре = 32°C")
+#plt.title("Изменение веса рыбы при постоянной температуре = 32°C")
 plt.xlabel("time (время в сутках)")
 plt.ylabel("weight (вес)")
-plt.axis([0, 63, 0.1, 0.2])
+plt.axis([0, 270, 0.1, 2])
 ax2.xaxis.set_major_locator(ticker.MultipleLocator(7))
 
 #начальный вес
 weight = 0.1
-#temperature = 22
+temperature = 22
 #temperature = 27
-temperature = 32
+#temperature = 32
 delta_temperature = 5
 weight_temperature = 27
 delta_weight_temperature = 5
@@ -43,7 +43,7 @@ _temperature1 = []
 _weight_temperature = []
 _weight_temperature1 = []
 #рисуем график, пока не прошло 500 суток
-while time < 63:
+while time < 270:
     #скорость набора веса - производная; увеличивается
     velocity = math.exp((temperature-weight_temperature)/delta_weight_temperature)*((1/time1)*(math.exp(-time/time1)))
     velocity_temp = 0

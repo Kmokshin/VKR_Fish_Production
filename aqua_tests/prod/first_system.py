@@ -35,5 +35,6 @@ while time < 300:
 #эталонный график со сглаживанием по расстоянию
 #plt.plot(_time,_weight1)
 #получившийся график без сглаживания по расстоянию
-plt.plot(_time,_weight)
 plt.show()
+plt.plot(_time,_weight)
+#plt.savefig('plot.png')

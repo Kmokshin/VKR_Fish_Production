@@ -13,7 +13,7 @@ plt.grid()
 plt.title("Изменение веса рыбы при изменяющейся температуре от 22°C до 32°C")
 plt.xlabel("time (время в сутках)")
 plt.ylabel("weight (вес)")
-plt.axis([0, 63, 0.1, 0.2])
+plt.axis([0, 270, 0.1, 2])
 ax2.xaxis.set_major_locator(ticker.MultipleLocator(7))
 
 #начальный вес
@@ -39,7 +39,7 @@ _temperature1 = []
 _weight_temperature = []
 _weight_temperature1 = []
 #рисуем график, пока не прошло 500 суток
-while time < 63:
+while time < 270:
     #скорость набора веса - производная; увеличивается
     velocity = math.exp((temperature-weight_temperature)/delta_weight_temperature)*((1/time1)*(math.exp(-time/time1)))
     velocity_temp = (2*3.14/temp_time1)*(delta_temperature*math.cos((2*3.14*temp_time)/temp_time1))
